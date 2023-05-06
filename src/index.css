@@ -1,3 +1,8 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +15,294 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+body, html {
+  height: 100%;
+  width: 100%;
+  background-color: #FFF8D6;
+}
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.x-axis-flex {
+  display: flex;
+}
+.y-axis-flex{
+  display: flex;
+  flex-direction: column;
+}
+.layout {
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  height: 10%;
+}
+.app-icon {
+  flex-grow: 1;
+}
+.top-right-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 100px; */
+}
+.van-home-image {
+  width: 100%;
+  height: 100%;
+  background-image: url("/public/home.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-body {
+  max-width: 1300px;
+  width: 100%;
+  height: 80%;
+  overflow: scroll;
+}
+.image-over-layer {
+  position: absolute;
+  color: white;
+  min-width: 320px;
+  width: 60%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.home-heading {
+  font-size: 50px;
+}
+.route-link {
+  color: black;
+  text-decoration: none;
+  padding: 0px 10px;
+}
+
+.active-link, .route-link:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.find-van-button {
+  padding: 20px 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #F97B22;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.app-footer {
+  background-color: #212A3E;
+  width: 100%;
+  height: 7%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.about-image {
+  background-image: url(/public/about.png);
+  width: 100%;
+  height: 30%;
+  background-size: cover;
+  background-position: center center 0;
+}
+.about-body {
+  height: 65%;
+  max-height: 650px;
+  max-width: 500px;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-bottom {
+  width: 100%;
+  padding: 20px;
+  background-color: #FFA559;
+  border-radius: 5px;
+}
+
+.explore-van-button, .rent-van-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.explore-van-button:active, .find-van-button:active {
+  transform: scale(0.9);
+}
+
+.vans{
+  width: 100%;
+  align-items: center;
+}
+.van {
+  max-width: 150px;
+  width: 100%;
+  height: 280px;
+  margin: 0px 10px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.vans-wrapper {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.van-link {
+  text-decoration: none;
+  color: black;
+}
+.van-image {
+  width: 100%;
+}
+.van-name-price {
+  justify-content: space-between;
+}
+
+.van-type {
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  width: 70px;
+  text-align: left;
+}
+
+.van-details-wrapper {
+  max-width: 500px;
+  width: 95%;
+  height: 100%;
+}
+.full-van-details{
+  width: 100%;
+  height: 98%;
+  justify-content: space-between;
+}
+.van-detail-image {
+  width: 100%;
+  height: 350px;
+}
+.rent-van-button {
+  background-color: #F97B22;
+}
+.van-detail-desc {
+  height: 15%;
+  overflow: scroll;
+}
+
+.host {
+  width: 100%;
+  height: 80%;
+  padding: 10px;
+}
+.host-nav-link {
+  padding: 0px 10px;
+}
+
+.host-body {
+  margin-top: 20px;
+  padding: 10px;
+  height: 80%;
+}
+
+.host-van-list {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  margin-top: 15px;
+}
+.host-van-link {
+  text-decoration: none;
+  color: black;
+}
+.host-van {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+}
+.host-van-image {
+  width: 20%;
+  border-radius: 5px;
+}
+.host-van-body {
+  padding-left: 10px;
+}
+.go-back-button {
+  cursor: pointer;
+}
+.go-back-button:hover {
+  text-decoration: underline;
+}
+.host-van-details {
+  padding: 10px;
+  margin-top: 20px;
+  height: 90%;
+}
+.host-van-details-body {
+  /* height: 90%; */
+  width: 100%;
+  margin-top: 10px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+.host-van-details-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+}
+.host-van-details-info {
+  margin-left: 15px;
+  justify-content: flex-start;
+}
+.host-details-nav {
+  margin: 10px 0px;
+}
+.current-van-desc-para {
+  padding: 7px 0px;
+}
+.host-van-details-photo-wrapper {
+  width: 100%;
+  overflow-x: scroll;
+  align-items: center;
+  padding: 10px 0px;
+}
+.host-van-details-photo {
+  width: 100px;
+  height: 100px;
+  margin: 0px 5px;
+  border-radius: 5px;
 }
