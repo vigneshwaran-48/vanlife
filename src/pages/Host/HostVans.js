@@ -17,7 +17,7 @@ let Vans = () => {
             <Link 
                 key={`host-van-${elem.id}`}
                 className="host-van-link" 
-                to={`/host/van/${elem.id}`}
+                to={`${elem.id}`}
             >
                 <div className="host-van x-axis-flex">
                     <img className="host-van-image" src={elem.imageUrl} alt="van" />

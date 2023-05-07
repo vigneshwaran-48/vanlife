@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 let VanDetails = () => {
 
     const params = useParams();
 
     const [van, setVan] = useState(null);
+
+    const location = useLocation();
+
+    const search = location.state?.search || "";
+
+    const type = location.state?.type || "all";
 
     let getVanData = async () => {
         let response = await fetch(`/api/vans/${params.id}`)
@@ -15,7 +21,7 @@ let VanDetails = () => {
 
     useEffect(() => {
         getVanData();
-    }, [params.id]);
+    }, []);
 
     let color = "";
     if(van != null) {
@@ -26,6 +32,13 @@ let VanDetails = () => {
 
     return (
         <div className="van-details-wrapper">
+            <Link
+                className="route-link back-to-button" 
+                to={`..${search}`}
+                relative="path" 
+            >
+                {`Go back to ${type} vans`}
+            </Link>
             {van ? (
                 <div key={`${params.id}-van-details`} className="full-van-details y-axis-flex">
                     <img className="van-detail-image" src={van.imageUrl} alt="van" />
